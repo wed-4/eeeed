@@ -28,9 +28,21 @@
 
             <Button
                 android:id="@+id/button4"
-                android:layout_width="match_parent"
+                android:layout_width="270dp"
                 android:layout_height="wrap_content"
                 android:text="Button" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
         </LinearLayout>
 
     </LinearLayout>
