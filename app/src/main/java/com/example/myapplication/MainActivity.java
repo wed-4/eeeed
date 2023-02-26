@@ -20,16 +20,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button button = findViewById(R.id.button4);
         MyThread thread = new MyThread();
         myQueue = Volley.newRequestQueue(getApplicationContext());
-        thread.start();
+        button.setOnClickListener(view -> thread.start());
+
     }
 
     private void postdata() {
         // URLを指定
         String url = "https://geolocation-db.com/json/";
 
-// Volleyを使用してHTTPリクエストを作成
+        // Volleyを使用してHTTPリクエストを作成
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
